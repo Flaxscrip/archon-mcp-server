@@ -26,7 +26,7 @@ import os from 'os';
 // Configuration
 const WALLET_DIR = process.env.ARCHON_WALLET_DIR || path.join(os.homedir(), '.archon-mcp');
 const WALLET_FILE = process.env.ARCHON_WALLET_FILE || 'wallet.json';
-const GATEKEEPER_URL = process.env.GATEKEEPER_URL || 'https://archon.technology';
+const GATEKEEPER_URL = process.env.ARCHON_GATEKEEPER_URL || process.env.GATEKEEPER_URL || 'https://archon.technology';
 const PASSPHRASE = process.env.ARCHON_PASSPHRASE || 'changeme';
 const DEFAULT_REGISTRY = process.env.ARCHON_REGISTRY || 'hyperswarm';
 

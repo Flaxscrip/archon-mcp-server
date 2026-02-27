@@ -71,10 +71,29 @@ That's it! Your wallet is stored at `~/.archon-mcp/wallet.json`.
 | Environment Variable | Default | Description |
 |---------------------|---------|-------------|
 | `ARCHON_PASSPHRASE` | `changeme` | Wallet encryption passphrase |
+| `ARCHON_GATEKEEPER_URL` | `https://archon.technology` | Gatekeeper API endpoint |
 | `ARCHON_WALLET_DIR` | `~/.archon-mcp` | Wallet storage directory |
 | `ARCHON_WALLET_FILE` | `wallet.json` | Wallet filename |
-| `GATEKEEPER_URL` | `https://archon.technology` | DID resolution endpoint |
 | `ARCHON_REGISTRY` | `hyperswarm` | Default DID registry |
+
+### Using a Local Node
+
+To connect to your own Archon node instead of the public gateway:
+
+```json
+{
+  "mcpServers": {
+    "archon": {
+      "command": "npx",
+      "args": ["@archon-protocol/mcp-server"],
+      "env": {
+        "ARCHON_PASSPHRASE": "your-secure-passphrase",
+        "ARCHON_GATEKEEPER_URL": "http://localhost:4224"
+      }
+    }
+  }
+}
+```
 
 ## Example: Two AIs Messaging
 
