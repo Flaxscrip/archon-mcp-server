@@ -1,0 +1,55 @@
+{
+  "name": "@archon-protocol/mcp-server",
+  "version": "0.1.0",
+  "description": "Archon MCP Server - Self-sovereign identity for AI agents. Local wallet, local crypto, decentralized identity.",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "archon-mcp": "build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc && chmod 755 build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "archon",
+    "did",
+    "decentralized-identity",
+    "verifiable-credentials",
+    "ai-agents",
+    "self-sovereign-identity",
+    "ssi",
+    "claude-desktop",
+    "wallet"
+  ],
+  "author": "Archetech <info@archetech.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/archetech/archon-mcp-server"
+  },
+  "homepage": "https://archon.technology",
+  "bugs": {
+    "url": "https://github.com/archetech/archon-mcp-server/issues"
+  },
+  "dependencies": {
+    "@didcid/keymaster": "^0.4.1",
+    "@modelcontextprotocol/sdk": "^1.10.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "typescript": "^5.8.3"
+  }
+}
